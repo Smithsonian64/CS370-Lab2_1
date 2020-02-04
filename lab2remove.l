@@ -6,6 +6,15 @@
 
             Modified by Michael Smith
             January 2020
+
+Changes:
+-Added catches for characters, numbers, symbols, tab and whitspaces and comment 
+ characters "*/" and "/*" so the input file is printed with the error
+ messages.
+-Added linecount variable so that when each newline character is encountered
+ the variable is incremented and the totale line count is printed.
+-Added EOF catch to make the end of file obvious when printing.
+-added return type and void parameter to main
  
          */
         int comment = 0;
@@ -52,7 +61,7 @@ int yywrap(void)
 { return 1;
 }
 
-int main()
+int main(void)
 {
   printf("%d: ", lineCount);
   yylex();

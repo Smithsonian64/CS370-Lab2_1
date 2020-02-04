@@ -1856,7 +1856,7 @@ int yywrap(void)
 { return 1;
 }
 
-int main()
+int main(void)
 {
   printf("%d: ", lineCount);
   yylex();
